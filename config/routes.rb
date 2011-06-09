@@ -10,6 +10,7 @@ SampleApp::Application.routes.draw do
   # ProfilesController, due to conflicts with /users/:id route and
   # Devise's standard routes
   resources :profiles, :only => [:index, :show]
+  resources :microposts,    :only => [:create, :destroy]
 
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
