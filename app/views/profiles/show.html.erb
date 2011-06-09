@@ -12,6 +12,8 @@
         <%= will_paginate @microposts %>
       <% end %>
     </td>
+    <%= link_to "delete", profile_path(@user), :method => :delete, :confirm => "You sure?",
+                          :title => "Delete #{@user.name}" %>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong>  <%= link_to profile_path(@user.id), profile_path(@user.id) %><br />

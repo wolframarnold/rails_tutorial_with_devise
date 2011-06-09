@@ -9,7 +9,7 @@ SampleApp::Application.routes.draw do
   # Additional user actions separated out into a new controller,
   # ProfilesController, due to conflicts with /users/:id route and
   # Devise's standard routes
-  resources :profiles, :only => [:index, :show]
+  resources :profiles, :only => [:index, :show, :destroy]
   resources :microposts,    :only => [:create, :destroy]
 
   match '/contact', :to => 'pages#contact'
