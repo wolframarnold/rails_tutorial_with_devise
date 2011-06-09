@@ -8,6 +8,7 @@ gem 'rails', '3.0.8'
 gem 'sqlite3', '~> 1.3.3'
 gem 'devise', '~> 1.3.4'
 gem 'gravatar_image_tag', "~> 1.0.0"
+gem 'faker', '~> 0.9.5'
 
 group :development do
   gem 'rspec-rails', '~> 2.6.0'
