@@ -238,3 +238,10 @@ form.new_micropost textarea {
     margin-bottom: 0;
 }
 
+ul.users {
+    margin-top: 1em;
+}
+
+.users li {
+    list-style: none;
+}

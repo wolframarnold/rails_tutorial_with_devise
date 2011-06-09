@@ -6,7 +6,7 @@
       <% if signed_in? %>
         <li><%= link_to "Profile", profile_path(current_user) %></li>
         <li><%= link_to "Users", profiles_path %></li>
-        <li><%= link_to "Settings", edit_user_registration_path(current_user.id) %></li>
+        <li><%= link_to "Settings", edit_user_registration_path %></li>
       <% end %>
       <li><%= link_to "Help", help_path %></li>
       <% if signed_in? %>
