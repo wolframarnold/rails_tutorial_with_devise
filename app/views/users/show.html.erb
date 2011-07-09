@@ -9,7 +9,7 @@
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %>
       <br/>
-      <strong>URL</strong> <%= link_to profile_path(@user.id), profile_path(@user.id) %>
+      <strong>URL</strong> <%= link_to user_path(@user.id), @user %>
     </td>
   </tr>
 </table>

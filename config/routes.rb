@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  devise_for :users do
+  devise_for :users, :path_prefix => 'd' do
     # Aliased routes to match Rails Tutorial
     get 'signin',  :to => 'devise/sessions#new'
     get 'signout', :to => 'devise/sessions#destroy'
@@ -7,9 +7,8 @@ SampleApp::Application.routes.draw do
   end
 
   # Additional user actions separated out into a new controller,
-  # ProfilesController, due to conflicts with /users/:id route and
-  # Devise's standard routes
-  resources :profiles, :only => [:index, :show]
+  # Note that Devise's controllers already handle login/logou, sign-up, etc.
+  resources :users, :only => [:index, :show]
 
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'

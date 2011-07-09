@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
 
   # This tells Devise where to re-direct to after successful sign up or sign in
   def after_sign_in_path_for(user)
-    profile_path(user.id)
+    user_path(user.id)
   end
 end
