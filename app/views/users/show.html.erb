@@ -2,14 +2,14 @@
   <tr>
     <td class="main">
       <h1>
-        User's gravatar image (hint: see users_helper.rb file)
-        and User's name here
+        <%= gravatar_for @user %>
+        <%= @user.name %>
       </h1>
     </td>
     <td class="sidebar round">
-      <strong>Name</strong> User's name here
+      <strong>Name</strong> <%= @user.name %>
       <br/>
-      <strong>URL</strong> Link to this page here
+      <strong>URL</strong> <%= link_to user_path(@user.id), @user %>
     </td>
   </tr>
 </table>
