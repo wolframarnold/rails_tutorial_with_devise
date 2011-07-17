@@ -25,8 +25,7 @@ describe "LayoutLinks" do
   it "should have a signup page at '/signup'" do
     get '/signup'
     response.should be_success
-    # TODO: add form assertions here
-    #response.should have_selector('title', :content => "Sign up") -- not title
+    response.should have_selector('h2', :content => "Sign up")
   end
 
   it "should have the right links on the layout" do
@@ -40,6 +39,7 @@ describe "LayoutLinks" do
     click_link "Home"
     response.should have_selector('title', :content => "Home")
     click_link "Sign up now!"
+    response.should have_selector('h2', :content => "Sign up")
     # TODO -- form assertions
     #response.should # fill in
   end
