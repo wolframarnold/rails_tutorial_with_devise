@@ -3,8 +3,6 @@ require 'spec_helper'
 describe Devise::RegistrationsController do
   render_views
 
-  include Devise::TestHelpers
-
   before do
     # The following request parameter is necessary for testing, according to:
     # https://github.com/plataformatec/devise/wiki/How-To:-Controllers-and-Views-tests-with-Rails-3-(and-rspec)
