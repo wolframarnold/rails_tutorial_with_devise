@@ -8,7 +8,7 @@ SampleApp::Application.routes.draw do
 
   # Additional user actions separated out into a new controller,
   # Note that Devise's controllers already handle login/logou, sign-up, etc.
-  resources :users, :only => [:index, :show]
+  resources :users, :only => [:index, :show, :destroy]
 
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
