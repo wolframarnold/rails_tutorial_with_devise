@@ -8,8 +8,8 @@ describe UsersController do
     describe "for non-signed-in users" do
       it "should deny access" do
         get :index
-        response.should redirect_to(signin_path)
-        flash[:notice].should =~ /sign in/i
+        response.should redirect_to(new_user_session_path)
+        flash[:alert].should =~ /sign in/i
       end
     end
 
@@ -67,7 +67,7 @@ describe UsersController do
     describe "as a non-signed-in user" do
       it "should deny access" do
         delete :destroy, :id => @user
-        response.should redirect_to(signin_path)
+        response.should redirect_to(new_user_session_path)
       end
     end
 
